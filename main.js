@@ -79,7 +79,13 @@ function changeColor(e) {
   e.target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%';
   priceForViews()
 }
-
-
-
 rangeInput.addEventListener("input", changeColor);
+
+//SET WIDTH OF RANGE BAR ONLOAD
+function rangeBarUpdate() {
+  const min = rangeInput.min;
+  const max = rangeInput.max;
+  const val = rangeInput.value;
+
+    rangeInput.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%';
+}
